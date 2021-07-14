@@ -1,0 +1,42 @@
+1.yarn add -D webpack 
+for : 
+=> installs webpack in devDependencies & adds node modules also. (refer screenshot).
+
+2. yarn add -D webpack-cli  
+ for : 
+=> installs webpack-cli in devDependencies.
+
+3. yarn add -D webpack-dev-server 
+for : 
+=> installs webpack-dev-server in devDependencies.
+info : Direct dependencies 
+=> webpack-dev-server@3.11.2
+info : all dependencies 
+=> "@types/globe@^7.1.1":
+
+----------after above commands---------------------
+ "devDependencies": {
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
+---------------------------------------------
+
+3. adding .gitignore
+
+4. added webpack.config.js...
+
+module.exports = {
+    mode : "development",
+    devServer : {
+        contentBase : "./dist"
+    }
+}
+
+5.creating index.html & index.js 
+6. combined script with index.html ( <script src="./dist/main.js"></script>)
+
+(problems)
+
+src = (give correct ./ or ../ .  ../dist/main.js gives the output in console)
