@@ -40,3 +40,40 @@ module.exports = {
 (problems)
 
 src = (give correct ./ or ../ .  ../dist/main.js gives the output in console)
+
+
+7. babel configuration------------------------
+
+cmd :  npm i -D  "@babel/core": "^7.14.6",
+           "@babel/preset-env": "^7.14.7",
+           "babel-loader": "^8.2.2",
+
+changes : convert Es6 to Es5 -----------------  
+
+bebel.config.js-------------------
+
+module.exports = {
+    presets: ['@babel/preset-env']
+}
+
+--------------
+
+webpack.config.js
+-----------------------------------
+ module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
+        ]
+    },
+
+-------------------------------------------
+
+8. sourceMap ------------ not working
+
+9. css loaders
