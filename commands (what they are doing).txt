@@ -77,3 +77,16 @@ webpack.config.js
 8. sourceMap ------------ not working
 
 9. css loaders
+
+cmd :  npm i -D css-loader mini-css-extract-plugin
+
+(problems) : import necessary styles from in index.js files 
+
+webpack.config.js ---------------------------------
+
+ {
+  test: /\.css$/i,
+  use: [MiniCssExtractPlugin.loader, 'css-loader']
+  },
+
+ plugins: [new MiniCssExtractPlugin()],

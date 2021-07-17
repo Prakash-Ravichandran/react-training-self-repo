@@ -1,4 +1,5 @@
 import './styles/index.css';
+import './scss/index.scss';
 
 let packages = ['recharts','redux','react-bootstrap','babel'];
 let components = ['Image','CheckBox','Label','Buttons','modal','pop-over'];
